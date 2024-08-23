@@ -1,0 +1,456 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+@keyframes slide-to-right {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  } 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes text-visible {
+  from {
+    width: 0;
+  } to {
+    width: 100%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  opacity: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #232323;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 1200px;
+  min-width: 1000px;
+  padding: 20px;
+  animation: fade 0.7s;
+  cursor: default;
+}
+
+.login-box {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-section {
+  margin-right: 100px;
+  margin-left: 50px;
+  color: #EEE;
+  flex: 1;
+  text-align: left;
+  min-width: 500px;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.welcome-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 1;
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  animation: text-visible 1.5s linear;
+}
+
+.welcome-section span {
+  font-size: 4rem;
+  font-weight: 400;
+  display: block;
+  margin-top: -0.5rem;
+
+  position: relative;
+  top: -30px;
+
+  letter-spacing: 0.2px;
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  animation: fade-up 1.7s linear;
+}
+
+.welcome-section p {
+  position: relative;
+  top: -30px;
+}
+
+.welcome-section img {
+  position: relative;
+  top: -35px;
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.login-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 200px;
+
+  position: relative;
+  top: 5px;
+  color: #FFFFFF;
+  animation: fade-up 1.5s;
+}
+
+.login-section h2 {
+  font-size: 3rem;
+  margin-bottom: 3px;
+  animation: slide-to-right 0.4s;
+}
+
+.login-section p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  animation: slide-to-right 0.5s;
+}
+
+.fill-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-group input {
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid whitesmoke;
+  font-size: 16px;
+  outline: none;
+  position: relative;
+  color: whitesmoke;
+  font-weight: 500;
+  z-index: 1;
+  animation: slide-to-right 0.8s;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #aaa;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: text;
+  transition: 0.2s ease-in-out all;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 4px;
+  padding-bottom: 0;
+}
+.input-group label span {
+  color: red;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 2px;
+  left: 10px;
+  font-size: 12px;
+  color: #e9e9e9;
+  font-weight: bolder;
+  background-color: #232323;
+}
+
+.forgot-remember-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forgot-password {
+  text-align: left;
+  margin-bottom: 20px;
+  animation: slide-to-right 1.3s;
+}
+.forgot-password a {
+  color: #B199FF;
+  text-decoration: none;
+  transition: 0.20s ease-in-out all;
+}
+
+.remember-me {
+  animation: slide-to-right 1s;
+}
+
+.submit-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+  width: 100%;
+  padding: 15px;
+
+  background-color: #9C6FE4;
+  color: #FFFFFF;
+
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  animation: slide-to-right 1.5s;
+  transition: 0.20s ease-in-out all;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 10px;
+  margin-bottom: 40px;
+  animation: slide-to-right 1.8s;
+}
+.sign-up text {
+  animation: none;
+}
+
+.sign-up button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+
+  background-color: #9C6FE4;
+  opacity: 0.8;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: 0.20s ease-in-out all;
+}
+
+.sign-up a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.submit-button:hover, .sign-up button:hover {
+  background-color: #b383ff;
+}
+.forgot-password a:hover {
+  color: #aa9cc0;
+  text-decoration: underline;
+}
+
+.login-methods {
+  background-color: transparent;
+  height: 20%;
+  border-radius: 20px;
+  border-top: 2px solid rgb(190, 190, 190);
+  position: relative;
+  animation: fade-up 2s;
+}
+.or-element {
+  position: absolute;
+  left: 45%; top: -14px;
+  padding: 3px 6px;
+  background-color: #232323;
+}
+
+.sign-methods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.google-sign, .apple-sign, .facebook-sign {
+  position: relative;
+  top: 40px;
+  border: 2px solid rgb(88, 88, 88);
+  border-radius: 5px;
+  align-items: center;
+  vertical-align: middle;
+  padding: 1px 30px;
+  cursor: pointer;
+  animation: none;
+  transition: 0.35s ease-in-out all;
+}
+
+.google-icon, .apple-icon, .facebook-icon {
+  position: relative;
+  top: 2px;
+}
+.google-sign {
+  animation: slide-up 1s;
+}
+.apple-sign {
+  animation: slide-up 1.6s;
+}
+.facebook-sign {
+  animation: slide-up 2.2s;
+}
+
+.google-sign:hover, .apple-sign:hover, .facebook-sign:hover {
+  background-color: rgb(52, 52, 52);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 70%;
+    padding: 15px 50px;
+  }
+
+  .login-box {
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    margin: 0;
+    text-align: center;
+    min-width: auto;
+  }
+
+  .welcome-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-section span {
+    font-size: 2.5rem;
+    margin-top: 0;
+    top: 0;
+  }
+
+  .login-section {
+    min-width: auto;
+    position: static;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .sign-methods {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .google-sign, .apple-sign, .facebook-sign {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .forgot-password {
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .login-box {
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .welcome-section h1 {
+    font-size: 3rem;
+  }
+
+  .welcome-section span {
+    font-size: 3rem;
+  }
+
+  .login-section {
+    min-width: auto;
+  }
+
+  .input-group input {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .submit-button {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .login-box {
+    flex-direction: column;
+  }
+
+  .welcome-section {
+    margin: 10px 0;
+  }
+}
