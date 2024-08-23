@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Student</title>
+
+    <link rel="stylesheet" href="styles/create_account.css">
+    <script src="src/create_account.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="create-box">
+            <div class="create-methods">
+                <div class="sign-methods">
+                    <div class="google-sign">
+                        <img class="google-icon" width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo"/>
+                    </div>
+                    <div class="apple-sign">
+                        <img class="apple-icon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/mac-os.png" alt="apple-logo"/>
+                    </div>
+                    <div class="facebook-sign">
+                        <img class="facebook-icon" width="30" height="30" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-logo"/>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-section">
+                <h1>Create Account</h1>
+                <p>Please Details to Proceed</p>
+            </div>
+            <div class="create-section">
+                <form class="fill-form" id="register-form">
+                    <div class="input-group username">
+                        <input class="username" id="username" type="text" placeholder="" required>
+                        <label for="username" class="input-text">Username</label>
+                    </div>
+                    <div class="input-group email_address">
+                        <input class="email-address" id="email-address" type="text" placeholder="" required>
+                        <label for="email-address" class="input-text">Email Address</label>
+                    </div>
+                    <div class="input-group password">
+                        <input class="password" id="password" type="password" placeholder="" required>
+                        <label for="password" class="input-text">Password</label>
+                        <img id="eye-icon" class="eye-icon" src="images\eye.png" alt="Show password" onclick="togglePassword()">
+                    </div>
+                    <p class="text">(Password Should be minimum of 8 Characters)</p>
+                    <div class="error-message"></div>
+                    <button class="submit-button" type="submit">Create Account</button>
+                </form>
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

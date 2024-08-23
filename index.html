@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Login</title>
+
+    <link rel="stylesheet" href="styles/general.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="welcome-section">
+                <h1>Welcome to</h1>
+                <span>student portal</span>
+                <p>Please Login to Proceed</p>
+                <img src="images/pic_1.png" alt="Students images">
+            </div>
+            <div class="login-section">
+                <h2>Login</h2>
+                <p class="text">Enter your account details</p>
+                <form class="fill-form">
+                    <div class="input-group">
+                        <input id="username" type="text" placeholder="" required>
+                        <label for="username" class="input-text">Username<span>*</span></label>
+                    </div>
+                    <div class="input-group">
+                        <input id="password" type="password" placeholder="" required>
+                        <label for="password" class="input-text">Password<span>*</span></label>
+                    </div>
+                    <div class="forgot-remember-password">
+                        <div class="remember-me">
+                            <input id="remember-Me" type="checkbox">
+                            <label for="remember-Me" class="check-remember">Remember Me</label>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <button class="submit-button" type="submit">Login</button>
+                </form>                
+                <div class="sign-up">
+                    <div>
+                        <p>Don't have an account?</p>
+                    </div>
+                    <div>
+                        <button>
+                            <a href="create_account.html">Sign up</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-methods">
+                    <div class="or-element">
+                        OR
+                    </div>
+                    <div class="sign-methods">
+                        <div class="google-sign">
+                            <img class="google-icon" width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="Google"/>
+                        </div>
+                        <div class="apple-sign">
+                            <img class="apple-icon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/mac-os.png" alt="Apple"/>
+                        </div>
+                        <div class="facebook-sign">
+                            <img class="facebook-icon" width="30" height="30" src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
