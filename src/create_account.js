@@ -26,8 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (passWord.length < 8) {
             errorMessageDiv.innerHTML = 'Password should be at least 8 characters long';
-        } else {
-            errorMessageDiv.innerHTML = '';
+        } else if (!userName) {
+            errorMessageDiv.innerHTML = 'Please Provide User Name';
+        } else if (!emailAddress) {
+            errorMessageDiv.innerHTML = 'Please Provide Email Address';
 
             try {
                 const response = await fetch('http://127.0.0.1:5000/register', {
@@ -62,13 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (passWord.length < 8) {
             textElement.classList.add('text-red');
             textElement.classList.remove('text-green');
-            pass_border.classList.remove('border-green');
-            pass_border.classList.add('border-red');
         } else {
             textElement.classList.remove('text-red');
             textElement.classList.add('text-green');
-            pass_border.classList.remove('border-red');
-            pass_border.classList.add('border-green');
         }
     });
 });
