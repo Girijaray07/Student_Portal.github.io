@@ -116,6 +116,7 @@ body {
 }
 
 .welcome-section h1 {
+    display: flex;
     font-size: 3rem;
     font-weight: 700;
 }
