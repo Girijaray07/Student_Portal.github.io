@@ -116,8 +116,6 @@ body {
 }
 
 .welcome-section h1 {
-    animation: text-visible 1s;
-    text-wrap: nowrap;
     font-size: 3rem;
     font-weight: 700;
 }
